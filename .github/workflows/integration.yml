@@ -19,7 +19,7 @@ jobs:
           sudo curl -L "https://github.com/docker/compose/releases/download/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep -Po '"tag_name": "\K[0-9.]+')" \
           -o /usr/local/bin/docker-compose
           sudo chmod +x /usr/local/bin/docker-compose
-          
+
     - name: Install Pipenv
       run: pip install pipenv
 
@@ -28,7 +28,7 @@ jobs:
 
     - name: Build and start services with Docker Compose
       run: |
-        docker-compose -f docker_compose.yml up -d
+        docker-compose -f docker_compose.yml up
       working-directory: ./
 
     - name: Run integration tests
