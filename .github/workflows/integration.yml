@@ -40,7 +40,7 @@ jobs:
       working-directory: ./
 
     - name: Run integration tests
-      run: pipenv run pytest tests/integration_test/test_integration.py
+      run: pipenv run pytest 
       working-directory: ./
 
     - name: Tear down services
