@@ -36,7 +36,7 @@ jobs:
 
     - name: Build and start services with Docker Compose
       run: |
-        docker-compose -f docker_compose.yml up -d
+        docker-compose -f docker-compose.yml up -d
       working-directory: ./
 
     - name: Run integration tests
